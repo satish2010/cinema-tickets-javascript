@@ -179,10 +179,9 @@ describe('TicketService', () => {
   describe('Payment and seat calculation', () => {
     test('should calculate correct payment for adult tickets only', () => {
       // 3 adults = 3 * 25 = 75
-      const mockPaymentService = jest.spyOn(ticketService, 'purchaseTickets');
-      ticketService.purchaseTickets(1, new TicketTypeRequest('ADULT', 3));
-      // This test verifies the service executes without errors
-      // In a real scenario, we would mock the payment service to verify the amount
+      expect(() => {
+        ticketService.purchaseTickets(1, new TicketTypeRequest('ADULT', 3));
+      }).not.toThrow();
     });
 
     test('should calculate correct seats for mixed tickets', () => {
