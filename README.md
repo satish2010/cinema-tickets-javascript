@@ -62,6 +62,11 @@ cd cinema-tickets-javascript
 npm install
 ```
 
+3. Run tests:
+```bash
+npm test
+```
+
 ## Usage
 
 ### Basic Example
