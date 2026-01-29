@@ -2,9 +2,6 @@
   "name": "cinema-tickets-javascript",
   "description": "Cinema ticket booking system",
   "version": "1.0.1",
-  "engines": {
-    "node": ">=20.9.0"
-  },
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage"
