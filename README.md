@@ -45,9 +45,9 @@ The implementation adheres to the following business rules:
 
 ## Technical Requirements
 
-- **Node.js**: >= 20.9.0
-- **Module System**: ES Modules (type: "module")
-- **Testing Framework**: Jest (with ES modules support)
+- **Node.js**: v20.9.0 or higher
+- **Module System**: CommonJS (using `require` and `module.exports`)
+- **Testing Framework**: Jest
 
 ## Installation
 
@@ -67,8 +67,8 @@ npm install
 ### Basic Example
 
 ```javascript
-import TicketService from './src/pairtest/TicketService.js';
-import TicketTypeRequest from './src/pairtest/lib/TicketTypeRequest.js';
+const TicketService = require('./src/pairtest/TicketService');
+const TicketTypeRequest = require('./src/pairtest/lib/TicketTypeRequest');
 
 const ticketService = new TicketService();
 
@@ -203,9 +203,6 @@ The `TicketService` class implements the ticket purchasing logic with the follow
 # Run all tests
 npm test
 
-# Run tests in watch mode
-npm run test:watch
-
 # Run tests with coverage report
 npm run test:coverage
 ```
@@ -269,6 +266,7 @@ Processes a ticket purchase request.
 
 **Example:**
 ```javascript
+const ticketService = new TicketService();
 ticketService.purchaseTickets(
   123,
   new TicketTypeRequest('ADULT', 2),
