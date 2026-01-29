@@ -1,6 +1,6 @@
-import TicketService from '../src/pairtest/TicketService.js';
-import TicketTypeRequest from '../src/pairtest/lib/TicketTypeRequest.js';
-import InvalidPurchaseException from '../src/pairtest/lib/InvalidPurchaseException.js';
+const TicketService = require('../src/pairtest/TicketService');
+const TicketTypeRequest = require('../src/pairtest/lib/TicketTypeRequest');
+const InvalidPurchaseException = require('../src/pairtest/lib/InvalidPurchaseException');
 
 describe('TicketService', () => {
   let ticketService;

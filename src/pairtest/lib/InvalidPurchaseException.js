@@ -1,3 +1,5 @@
-export default class InvalidPurchaseException extends Error {
+class InvalidPurchaseException extends Error {
 
 }
+
+module.exports = InvalidPurchaseException;

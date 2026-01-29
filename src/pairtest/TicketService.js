@@ -1,9 +1,9 @@
-import TicketTypeRequest from './lib/TicketTypeRequest.js';
-import InvalidPurchaseException from './lib/InvalidPurchaseException.js';
-import TicketPaymentService from '../thirdparty/paymentgateway/TicketPaymentService.js';
-import SeatReservationService from '../thirdparty/seatbooking/SeatReservationService.js';
+const TicketTypeRequest = require('./lib/TicketTypeRequest');
+const InvalidPurchaseException = require('./lib/InvalidPurchaseException');
+const TicketPaymentService = require('../thirdparty/paymentgateway/TicketPaymentService');
+const SeatReservationService = require('../thirdparty/seatbooking/SeatReservationService');
 
-export default class TicketService {
+class TicketService {
   // Ticket prices in GBP
   #TICKET_PRICES = {
     INFANT: 0,
@@ -139,3 +139,5 @@ export default class TicketService {
     return ticketCounts.ADULT + ticketCounts.CHILD;
   }
 }
+
+module.exports = TicketService;
